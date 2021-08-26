@@ -1,0 +1,487 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5570ba94e1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="Images/kuritsuku.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width; initial-scale=1;">
+    <script type="text/javascript" src="script.js"></script>
+    <!--Reference : https://deakin365-my.sharepoint.com/:w:/g/personal/vmattea_deakin_edu_au/EcuXxKSR-9xJhEH-EvVad-QBsTD22RgPtW1yvtWyPDgAdg?e=tGutoC -->
+</head>
+
+<body>
+    <!-- Opening Screen
+    Users will be welcomed with an interactive image with Kuritsuku's logo -->
+    <div class="main_screen">
+        <img src="/Images/launch.png" alt="Main Picture">
+        <div class="bottom_left_text">Welcome to<br>KURITSUKU</div>
+        <div class="caption">Treat your skin right!
+            Explore your favorite clean skin care products here.</div>
+        <button>Shop Now</button>
+    </div>
+    <!-- Opening Screen end-->
+
+<!-- Navigation Bar start -->
+    <nav class="navigation_bar">
+
+    <!-- Kuritsuku Home Button -->
+        <div class="home_button">
+            <a href="http://127.0.0.1:5500/index.html#">
+                KURITSUKU
+            </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search_container">
+            <input type="text" placeholder="Search ..." name="search">
+                <button type="submit">
+                    <a href="#">
+                        <i class="fas fa-search" style="color: white;"></i>
+                    </a>
+                </button>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="navigation_links">
+
+            <input type="checkbox" id="drop">
+                <label for="drop" class="dropbutton">
+                    <i class="fas fa-bars" style="font-size: 30px; padding: 16px;"></i>
+                </label>
+                <div class="dropdown_content"></div>
+                    <ul>
+                        <!-- User's Currency Preference -->
+                        <li>
+                            <a href="">
+                                <i title="Currency Preference" class="fas fa-dollar-sign" style="font-size: 30px"></i>
+                            </a>
+                                <div class="currency_button">
+                                    <button>USD</button>
+                                    <button>IDR</button>
+                                </div>
+                        </li>
+                        
+                        <!-- Shop -->
+                        <li>
+                            <a href="#">
+                                <i title="Shop by Category" class="fas fa-tags" style="font-size: 30px"></i>
+                            </a>
+                        </li>
+
+                        <!-- User's Fav List -->
+                        <li>
+                            <a href="#">
+                                <i title="My Favortites" class="fas fa-heart" style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                        
+                        <!-- User's Cart -->
+                        <li>
+                            <a href="#">
+                                <i title="My Cart" class="fas fa-shopping-cart" style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                        
+                        <!-- User's Profile -->
+                        <li>
+                            <a href="login.html">
+                                <i title="My Profile" class="far fa-user-circle" style="font-size: 30px"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+<!-- Navigation Bar end -->
+
+    <main>
+
+<!-- 2nd Nav Bar -->
+    <div class="navigation_bar_2">
+        <button><a href="#category">Shop by Category</a></button>
+        <button><a href="#">New Arrival</a></button>
+    </div>
+<!-- 2nd Nav Bar -->
+
+<!-- Image Slider (carousel) start -->
+        <div class="slider_border" style="overflow-x: hidden;">
+        <div class="slider">
+           <div class="slides">
+                <!-- Clickable Buttons start -->
+                    <input type="radio" name="radio_button" id="radio1">
+                    <input type="radio" name="radio_button" id="radio2">
+                    <input type="radio" name="radio_button" id="radio3">
+                <!-- Clickable Buttons end -->
+           
+                <!-- Images start -->
+                <div class="slide first">
+                    <img src="/Images/slider 1.png" alt="First Slide">
+                </div>
+                <div class="slide second">
+                    <img src="/Images/slider 3.png" alt="Second Slide">
+                </div>
+                <div class="slide third">
+                    <img src="/Images/slider 2.png" alt="Third Slide">
+                </div>
+                <!-- Images end -->
+
+                <!-- Automatic slides start -->
+                <div class="auto_slides">
+                    <div class="auto_button1"></div>
+                    <div class="auto_button2"></div>
+                    <div class="auto_button3"></div>
+                </div>
+                <!-- Automatic slides end -->
+
+                <!-- Manual slides start -->
+                <div class="manual_slides">
+                    <label for="radio1" class="manual_button"></label>
+                    <label for="radio2" class="manual_button"></label>
+                    <label for="radio3" class="manual_button"></label>
+                </div>
+                <!-- Manual slides end -->
+            </div>
+        </div> 
+        </div>
+<!-- Image Slider end -->
+
+        <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 3){
+                counter = 1;
+            }
+        }, 5000);
+        </script>
+
+<!-- Featured Product start -->
+        <div class="feature_border" style="overflow-x: hidden;">
+            <div class="feature">
+
+            <!-- Featured Post + Link to Shop the Product -->
+                <div class="feature_post">
+        
+                <p id="feature_name"><h2>AHA/BHA Clarifying Treatment Toner</h2></p>
+                <p id="feature_content">With low pH formula made with purifying botanical ingredients, this toner refreshes, soothes, and softens the skin.</p>
+                <button class="feature_button">
+                    <a href="#">Shop Now</a>
+                </button>
+                </div>
+
+            <!-- Featured Video -->
+                <div class="feature_vid">
+                    <img src="/Images/slider 4.png" alt="Featured Vid">
+                </div>
+            </div>
+        </div>
+<!-- Featured Product end -->
+
+<!-- Recycle start -->
+<div class="recycle">
+    <p><h2>Recycle with KURITSUKU</h2><br>
+    Return your empties in exchange for free products from us!</p><br>
+    <button class="recycle_button">
+        <a href="#">Recycle Now</a>
+    </button>
+</div>
+<!-- Recycle end -->
+
+<!-- About Us start -->
+<div class="aboutus">
+    <p><h2>Our Values and Mission</h2><br>
+    Learn more about how Kuritsuku changes the skin care industry with our clean, eco-friendly, vegan, and cruelty-free products. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quam perspiciatis porro amet deserunt eaque, necessitatibus ipsum eius quibusdam alias.</p><br>
+    <button class="aboutus_button">
+        <a href="#">About Us</a>
+    </button>
+</div>
+<!-- About Us end -->
+
+<!-- Best Seller Products start-->
+        <div class="bestseller">
+            <div class="bestseller_post"></div>
+            <div class="bestseller_product"></div>
+        </div>
+<!-- Best Seller Products end -->
+
+<!-- OK Product Category Slider start -->
+
+<!-- Category Slider --> 
+        <!---->
+<div class="category_post">
+    <h2 id="category">Shop by Category</h2>
+</div>
+
+<div class="category_box">
+    <div class="container">
+        <div class="category_slider">
+            <!-- Images -->
+            <div class="slide_image">
+                <img src="/Images/14.png" alt="Cleanser">
+            
+                <!-- Overlay -->
+                <div class="overlay">
+                    <!-- Go Button -->
+                    <a href="#" class="go_button" text-decoration="none">Go Now</a>
+                </div>
+            </div>
+            
+            <!-- Detail -->
+            <div class="slide_detail"></div>
+
+            <!-- Type -->
+            <div class="slide_type">
+                <a href="#" text-decoration="none">Cleanser</a>
+                <span>Suitable for ALL skin types</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="category_box">
+    <div class="container">
+        <div class="category_slider">
+            <!-- Images -->
+            <div class="slide_image">
+                <img src="/Images/16.png" alt="Cleanser">
+            
+                <!-- Overlay -->
+                <div class="overlay">
+                    <!-- Go Button -->
+                    <a href="#" class="go_button" text-decoration="none">Go Now</a>
+                </div>
+            </div>
+            
+            <!-- Detail -->
+            <div class="slide_detail"></div>
+
+            <!-- Type -->
+            <div class="slide_type">
+                <a href="#" text-decoration="none">Toner</a>
+                <span>Suitable for ALL skin types</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="category_box">
+    
+    <div class="container">
+        <div class="category_slider">
+            <!-- Images -->
+            <div class="slide_image">
+                <img src="/Images/15.png" alt="Cleanser">
+            
+                <!-- Overlay -->
+                <div class="overlay">
+                    <!-- Go Button -->
+                    <a href="#" class="go_button" text-decoration="none">Go Now</a>
+                </div>
+            </div>
+            
+            <!-- Detail -->
+            <div class="slide_detail"></div>
+
+            <!-- Type -->
+            <div class="slide_type">
+                <a href="#" text-decoration="none">Serum</a>
+                <span>Serum, Essence, and Ampoule</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="category_box">
+    
+    <div class="container">
+        <div class="category_slider">
+            <!-- Images -->
+            <div class="slide_image">
+                <img src="/Images/11.png" alt="Cleanser">
+            
+                <!-- Overlay -->
+                <div class="overlay">
+                    <!-- Go Button -->
+                    <a href="#" class="go_button" text-decoration="none">Go Now</a>
+                </div>
+            </div>
+            
+            <!-- Detail -->
+            <div class="slide_detail"></div>
+
+            <!-- Type -->
+            <div class="slide_type">
+                <a href="#" text-decoration="none">Moisturizer</a>
+                <span>Hydrate and retain your skin's moisture</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="category_box">
+    
+    <div class="container">
+        <div class="category_slider">
+            <!-- Images -->
+            <div class="slide_image">
+                <img src="/Images/12.png" alt="Cleanser">
+            
+                <!-- Overlay -->
+                <div class="overlay">
+                    <!-- Go Button -->
+                    <a href="#" class="go_button" text-decoration="none">Go Now</a>
+                </div>
+            </div>
+            
+            <!-- Detail -->
+            <div class="slide_detail"></div>
+
+            <!-- Type -->
+            <div class="slide_type">
+                <a href="#" text-decoration="none">Sun care</a>
+                <span>Protect your skin from UV light radiation</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="category_box">
+    
+    <div class="container">
+        <div class="category_slider">
+            <!-- Images -->
+            <div class="slide_image">
+                <img src="/Images/13.png" alt="Cleanser">
+            
+                <!-- Overlay -->
+                <div class="overlay">
+                    <!-- Go Button -->
+                    <a href="#" class="go_button" text-decoration="none">Go Now</a>
+                </div>
+            </div>
+            
+            <!-- Detail -->
+            <div class="slide_detail"></div>
+
+            <!-- Type -->
+            <div class="slide_type">
+                <a href="#" text-decoration="none">Face mask</a>
+                <span>Tranquility in a bottle</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- OK Product Category Slider end -->
+
+<!--Product Category start
+        <h2 id="category_text"> Shop by Category </h2>
+        <div class="category" style="overflow-x: hidden;">
+            
+            <div class="cleanser">
+                <a href="#">
+                <img src="/Images/4.png" alt="Cleanser">
+                </a>
+            </div>
+            <div class="toner">
+                <a href="#">
+                <img src="/Images/3.png" alt="Toner">
+                </a>
+            </div>
+            <div class="serum">
+                <a href="#">
+                <img src="/Images/5.png" alt="Essence, Serum, Ampoule">
+                </a>
+            </div>
+            <div class="moisturizer">
+                <a href="#">
+                 <img src="/Images/2.png" alt="Moisturizer">
+                </a>
+            </div>
+            <div class="sun">
+                <a href="#">
+                <img src="/Images/7.png" alt="Sun Care">
+                </a>
+            </div>
+            <div class="mask">
+                <a href="#">
+                <img src="/Images/6.png" alt="Face Mask">
+                </a>
+            </div>
+        </div> -->    
+
+    </main>
+
+<!-- Live Chat Feature-->
+    <button class="livechat">
+        <i class="far fa-comments" style="color: white; font-size: 30px;"></i>
+    </button>
+
+<footer>
+    <div class="footer_box">
+
+        <div class="footer_logo">
+            <h2>KURITSUKU</h2>
+            <p style="padding: 5px;">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, reprehenderit.
+            </p>
+        </div>
+
+        <div class="footer_subs">
+            <h4>Subscribe to KURITSUKU</h4>
+            <div class="subs_container">
+                <input type="text" placeholder="someone@example.com" name="subs">
+                    <button type="submit">
+                        <a href="#">
+                            <i class="fas fa-check" style="color: white;font-size: 17px;"></i>
+                        </a>
+                    </button>
+            </div>
+        </div>
+
+        <div class="find_us">
+            <h4>Find Us On</h4>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>            
+        </div>
+
+        <div class="footer_links">
+            <h4>Information</h4>
+            <ul>
+            <li>
+            <a href="#">
+                About Us
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                Contact Us
+            </a>
+            </li>
+            <li>
+            <a href="#">
+                Help Center
+            </a>
+            </li>
+            </ul>            
+        </div>
+    </div>
+</footer>
+</html>
